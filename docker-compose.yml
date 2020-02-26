@@ -19,7 +19,7 @@ services:
     build:
       context: .
       dockerfile: ./DockerfilePHP
-    image: php:7.4-fpm-mysqli
+    image: php:7.2-fpm-mysqli
     container_name: php
     restart: always
     volumes:
