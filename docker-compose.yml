@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+  db:
+    image: mariadb:10.5.1-bionic
+    container_name: mysql
+    ports:
+    - "3306:3306"
+    networks:
+      maraidb:
+#    volumes:
+#      - ./.data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+  php:
+    build:
+      context: .
+      dockerfile: ./DockerfilePHP
+    image: php:7.4-fpm-mysqli
+    container_name: php
+    restart: always
+    volumes:
+    - ./src:/var/www/html/public
+#    - "./php.ini:/usr/local/etc/php/conf.d/custom.ini"
+    networks:
+      maraidb:
+  server:
+    image: abiosoft/caddy
+    container_name: caddy
+    restart: always
+    ports:
+    - "8080:80"
+    networks:
+      maraidb:
+    volumes:
+    - "./Caddyfile:/etc/Caddyfile"
+    - ./src:/var/www/html/public
+#volumes:
+#  wordpress:
+#  db:
+networks:
+  maraidb:

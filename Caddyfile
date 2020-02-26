@@ -1,0 +1,23 @@
+(defaults) {
+    log stdout
+    errors stdout
+    gzip
+}
+
+*:80 {
+    import defaults
+    root /var/www/html/public
+    fastcgi / php:9000 php
+    rewrite {
+    	r /uploads\/(.*)\.php
+    	to /
+    }
+
+    rewrite {
+    	if {path} not_match ^\/wp-admin
+    	to {path} {path}/ /index.php?{query}
+    }
+    header /assets {       # 加入檔頭，指定 assets 路徑下
+        Cache-Control "max-age=604800"   # 控制瀏覽器快取，壽命一週
+    }
+}
