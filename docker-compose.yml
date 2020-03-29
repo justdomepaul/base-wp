@@ -23,21 +23,27 @@ services:
     container_name: php
     restart: always
     volumes:
-    - ./src:/var/www/html/public
+    - ${PWD}/src:/var/www/html/public
 #    - "./php.ini:/usr/local/etc/php/conf.d/custom.ini"
     networks:
       maraidb:
-  server:
-    image: abiosoft/caddy
+  caddy:
+    build:
+      context: .
+      dockerfile: ./DockerfileCaddy
+    image: wp-caddy:1.0.4
     container_name: caddy
     restart: always
     ports:
-    - "8080:80"
+    - 80:80
+    - 443:443
     networks:
       maraidb:
+    extra_hosts:
+      - "www.example2.com:127.0.0.1"
     volumes:
-    - "./Caddyfile:/etc/Caddyfile"
-    - ./src:/var/www/html/public
+    - ${PWD}/caddy.conf:/etc/caddy/caddy.conf
+    - ${PWD}/src:/var/www/html/public
 #volumes:
 #  wordpress:
 #  db:
