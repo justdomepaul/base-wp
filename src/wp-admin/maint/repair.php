@@ -7,11 +7,11 @@
  */
 define( 'WP_REPAIRING', true );
 
-require_once( dirname( dirname( dirname( __FILE__ ) ) ) . '/wp-load.php' );
+require_once dirname( dirname( __DIR__ ) ) . '/wp-load.php';
 
 header( 'Content-Type: text/html; charset=utf-8' );
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
 	<meta name="viewport" content="width=device-width" />

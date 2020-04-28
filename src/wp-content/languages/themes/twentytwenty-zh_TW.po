@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-12-13 08:31:25+0000\n"
+"PO-Revision-Date: 2020-02-24 13:17:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,8 +58,8 @@ msgid "With seven floors of striking architecture, UMoMA shows exhibitions of in
 msgstr "UMoMA 有七層各具特色的樓層，可舉辦國際現代藝術展覽，也可以用於舉辦藝術史回顧展。存在主義、政治學及哲學相關議題是本館計劃的固定內容。作為訪客，你可以免費參加各種導遊行程，如藝術家演講、講座、電影放映會及其他活動。"
 
 #: inc/starter-content.php:129
-msgid "”Cyborgs, as the philosopher Donna Haraway established, are not reverent. They do not remember the cosmos.”"
-msgstr "”哲學家 Donna Haraway 曾表示，賽伯格不具備崇敬之心，因為他們不會緬懷宇宙。”"
+msgid "&#8220;Cyborgs, as the philosopher Donna Haraway established, are not reverent. They do not remember the cosmos.&#8221;"
+msgstr ""
 
 #: inc/starter-content.php:113
 msgid "From Signac to Matisse"
@@ -138,7 +138,7 @@ msgstr "預設色彩"
 msgid "Primary Color"
 msgstr "主要色彩"
 
-#: template-parts/modal-search.php:20 searchform.php:24
+#: searchform.php:24 template-parts/modal-search.php:20
 msgid "Search for:"
 msgstr "搜尋關鍵字:"
 
@@ -146,23 +146,23 @@ msgstr "搜尋關鍵字:"
 msgid "search again"
 msgstr "再次搜尋"
 
-#. translators: %s: Number of search results
+#. translators: %s: Number of search results.
 #: index.php:39
 msgid "We found %s result for your search."
 msgid_plural "We found %s results for your search."
 msgstr[0] "目前找到 %s 項符合條件的搜尋結果。"
 
-#. translators: %s: HTML character for up arrow
+#. translators: %s: HTML character for up arrow.
 #: footer.php:49
 msgid "Up %s"
 msgstr "返回頂端 %s"
 
-#. translators: %s: HTML character for up arrow
+#. translators: %s: HTML character for up arrow.
 #: footer.php:43
 msgid "To the top %s"
 msgstr "返回頂端 %s"
 
-#. translators: Copyright date format, see https://secure.php.net/date
+#. translators: Copyright date format, see https://www.php.net/date
 #: footer.php:25
 msgctxt "copyright date format"
 msgid "Y"
@@ -170,7 +170,7 @@ msgstr "Y 年"
 
 #: 404.php:24
 msgid "404 not found"
-msgstr "404 錯誤"
+msgstr "404 找不到"
 
 #. Template Name of the theme
 msgid "Full Width Template"
@@ -194,7 +194,7 @@ msgstr "關閉搜尋"
 
 #: template-parts/modal-menu.php:117
 msgid "Expanded Social links"
-msgstr "開闔式社群網路連結"
+msgstr "開闔式社交網路服務連結"
 
 #: template-parts/modal-menu.php:73
 msgid "Mobile"
@@ -210,22 +210,22 @@ msgstr "關閉選單"
 
 #: template-parts/footer-menus-widgets.php:57
 msgid "Social links"
-msgstr "社群網路連結"
+msgstr "社交網路服務連結"
 
 #: template-parts/footer-menus-widgets.php:37
 msgid "Footer"
 msgstr "頁尾"
 
-#. translators: %s: Author name
-#: template-parts/entry-author-bio.php:20 inc/template-tags.php:354
+#. translators: %s: Author name.
+#: inc/template-tags.php:354 template-parts/entry-author-bio.php:20
 msgid "By %s"
 msgstr "作者: %s"
 
-#: template-parts/content.php:48 template-parts/content-cover.php:138
+#: template-parts/content-cover.php:138 template-parts/content.php:48
 msgid "Pages:"
 msgstr "頁次:"
 
-#: template-parts/content.php:48 template-parts/content-cover.php:138
+#: template-parts/content-cover.php:138 template-parts/content.php:48
 msgid "Page"
 msgstr "頁次"
 
@@ -264,8 +264,8 @@ msgstr "置頂文章"
 msgid "Tags"
 msgstr "標籤"
 
-#: template-parts/content-cover.php:70 template-parts/entry-header.php:36
-#: inc/template-tags.php:389
+#: inc/template-tags.php:389 template-parts/entry-header.php:36
+#: template-parts/content-cover.php:70
 msgid "Categories"
 msgstr "分類"
 
@@ -279,9 +279,9 @@ msgstr "文章作者"
 
 #: inc/starter-content.php:196
 msgid "Social Links Menu"
-msgstr "社群網路連結選單"
+msgstr "社交網路服務連結選單"
 
-#: functions.php:491 inc/starter-content.php:176 inc/starter-content.php:186
+#: inc/starter-content.php:176 inc/starter-content.php:186 functions.php:494
 msgid "Primary"
 msgstr "主要"
 
@@ -301,99 +301,99 @@ msgstr "搜尋"
 msgid "Continue reading"
 msgstr "閱讀全文"
 
-#: functions.php:548
+#: functions.php:551
 msgctxt "Short name of the larger font size in the block editor."
 msgid "XL"
 msgstr "XL"
 
-#: functions.php:547
+#: functions.php:550
 msgctxt "Name of the larger font size in the block editor"
 msgid "Larger"
 msgstr "較大型"
 
-#: functions.php:542
+#: functions.php:545
 msgctxt "Short name of the large font size in the block editor."
 msgid "L"
 msgstr "L"
 
-#: functions.php:541
+#: functions.php:544
 msgctxt "Name of the large font size in the block editor"
 msgid "Large"
 msgstr "大型"
 
-#: functions.php:536
+#: functions.php:539
 msgctxt "Short name of the regular font size in the block editor."
 msgid "M"
 msgstr "M"
 
-#: functions.php:535
+#: functions.php:538
 msgctxt "Name of the regular font size in the block editor"
 msgid "Regular"
 msgstr "標準"
 
-#: functions.php:530
+#: functions.php:533
 msgctxt "Short name of the small font size in the block editor."
 msgid "S"
 msgstr "S"
 
-#: functions.php:529
+#: functions.php:532
 msgctxt "Name of the small font size in the block editor"
 msgid "Small"
 msgstr "小型"
 
-#: functions.php:514
+#: functions.php:517
 msgid "Background Color"
 msgstr "背景色彩"
 
-#: functions.php:501
+#: functions.php:504
 msgid "Subtle Background"
 msgstr "區別背景"
 
-#: functions.php:496
+#: functions.php:499
 msgid "Secondary"
 msgstr "次要色彩"
 
-#: functions.php:486
+#: functions.php:489
 msgid "Accent Color"
 msgstr "強調色彩"
 
-#: functions.php:377
+#: functions.php:380
 msgid "Widgets in this area will be displayed in the second column in the footer."
 msgstr "在這個區域設定的小工具會顯示於第二個頁尾區域。"
 
-#: functions.php:375
+#: functions.php:378
 msgid "Footer #2"
 msgstr "頁尾 2"
 
-#: functions.php:365
+#: functions.php:368
 msgid "Widgets in this area will be displayed in the first column in the footer."
 msgstr "在這個區域設定的小工具會顯示於第一個頁尾區域。"
 
-#: functions.php:363
+#: functions.php:366
 msgid "Footer #1"
 msgstr "頁尾 1"
 
-#: functions.php:338
+#: functions.php:341
 msgid "Skip to the content"
 msgstr "跳至主要內容"
 
-#: functions.php:259
+#: functions.php:262
 msgid "Social Menu"
-msgstr "社群網路連結選單"
+msgstr "社交網路服務選單"
 
-#: functions.php:258
+#: functions.php:261
 msgid "Footer Menu"
 msgstr "頁尾選單"
 
-#: functions.php:257
+#: functions.php:260
 msgid "Mobile Menu"
 msgstr "行動版選單"
 
-#: functions.php:256
+#: functions.php:259
 msgid "Desktop Expanded Menu"
 msgstr "桌面版開闔式選單"
 
-#: functions.php:255
+#: functions.php:258
 msgid "Desktop Horizontal Menu"
 msgstr "桌面版水平選單"
 
@@ -417,14 +417,14 @@ msgstr "較舊的留言"
 msgid "Newer Comments"
 msgstr "較新的留言"
 
-#. translators: 1: number of comments, 2: post title
+#. translators: 1: Number of comments, 2: Post title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s reply on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
 msgstr[0] "在〈%2$s〉中有 %1$s 則留言"
 
-#. translators: %s: post title
+#. translators: %s: Post title.
 #: comments.php:37
 msgctxt "comments title"
 msgid "One reply on &ldquo;%s&rdquo;"
@@ -434,12 +434,12 @@ msgstr "在〈%s〉中有 1 則留言"
 msgid "Leave a comment"
 msgstr "發佈留言"
 
-#: classes/class-twentytwenty-walker-page.php:134 inc/template-tags.php:555
+#: classes/class-twentytwenty-walker-page.php:107 inc/template-tags.php:555
 msgid "Show sub menu"
 msgstr "顯示子選單"
 
-#. translators: %d: ID of a post
-#: classes/class-twentytwenty-walker-page.php:82
+#. translators: %d: ID of a post.
+#: classes/class-twentytwenty-walker-page.php:70
 msgid "#%d (no title)"
 msgstr "#%d (無標題)"
 
@@ -455,7 +455,7 @@ msgstr "你的留言正在等候審閱。"
 msgid "Edit"
 msgstr "編輯"
 
-#. Translators: 1 = comment date, 2 = comment time
+#. translators: 1: Comment date, 2: Comment time.
 #: classes/class-twentytwenty-walker-comment.php:69
 msgid "%1$s at %2$s"
 msgstr "%1$s%2$s"

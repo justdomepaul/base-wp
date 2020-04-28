@@ -389,7 +389,7 @@ class SimplePie_Sanitize
 			// Atom XHTML constructs are wrapped with a div by default
 			// Note: No protection if $html contains a stray </div>!
 			$html = '<div>' . $html . '</div>';
-			$ret .= '<!doctype html>';
+			$ret .= '<!DOCTYPE html>';
 			$content_type = 'text/html';
 		}
 		else
