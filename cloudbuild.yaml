@@ -1,0 +1,47 @@
+steps:
+#  - name: 'gcr.io/cloud-builders/docker'
+#    args:
+#      - 'build'
+#      - '-f'
+#      - './Dockerfile'
+#      - '-t'
+#      - 'asia.gcr.io/$PROJECT_ID/wordpress-gcr$_TAG'
+#      - '.'
+#  - name: 'gcr.io/cloud-builders/docker'
+#    args:
+#      - 'push'
+#      - 'asia.gcr.io/$PROJECT_ID/wordpress-gcr$_TAG'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'wordpress-server'
+      - '--image'
+      - 'asia.gcr.io/labs-371707/wordpress-gcr$_TAG'
+      - '--region'
+      - 'asia-east1'
+      - '--platform'
+      - 'managed'
+      - '--port'
+      - '80'
+      - '--cpu'
+      - '1'
+      - '--memory'
+      - '128Mi'
+      - '--add-cloudsql-instances'
+      - '$_DBHOST'
+      - '--allow-unauthenticated'
+      - '--update-env-vars'
+      - 'DB_NAME=wordpress,DB_USER=root,DB_HOST=:/cloudsql/$_DBHOST'
+      - '--set-secrets'
+      - 'DB_PASSWORD=$_SECRETID:latest'
+substitutions:
+  _TAG: :stage
+  _DBHOST: none
+  _SECRETID: root
+timeout: 1800s
+artifacts:
+  objects:
+    location: 'gs://gcr_image_store/artifacts'
+    paths: ['*']

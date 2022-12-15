@@ -1,0 +1,7 @@
+.idea/*
+.idea
+*.log
+.DS_Store
+tmp/*
+!tmp/.gitkeep
+cloud_sql_proxy
